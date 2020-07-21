@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_vit_data,vit.data,model_vit_data,,1,1,1,1
+access_vit_item,vit.item,model_vit_item,,1,1,1,1
+access_vit_data_line,vit.data_line,model_vit_data_line,,1,1,1,1

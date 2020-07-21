@@ -1,0 +1,81 @@
+<odoo>
+	<data>
+		<!-- tree view -->
+		<record model="ir.ui.view" id="vit_data_tree">
+			<field name="name">vit_data_tree</field>
+			<field name="model">vit.data</field>
+			<field name="type">tree</field>
+			<field name="priority" eval="8"/>
+			<field name="arch" type="xml">
+				<tree string="Data">
+					<field name="name"/>
+					<field name="waktu"/>
+				</tree>
+			</field>
+		</record>
+
+		<!-- form view -->
+		<record model="ir.ui.view" id="vit_data_form">
+			<field name="name">vit_data_form</field>
+			<field name="model">vit.data</field>
+			<field name="type">form</field>
+			<field name="priority" eval="8"/>
+			<field name="arch" type="xml">
+				<form string="Data">
+					<sheet>
+						<group>
+							<field name="name"/>
+							<field name="waktu" placeholder="Jumlah Hari"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<!-- tree view -->
+		<record model="ir.ui.view" id="vit_item_tree">
+			<field name="name">vit_item_tree</field>
+			<field name="model">vit.item</field>
+			<field name="type">tree</field>
+			<field name="priority" eval="8"/>
+			<field name="arch" type="xml">
+				<tree string="Item">
+					<field name="name"/>
+				</tree>
+			</field>
+		</record>
+
+		<!-- form view -->
+		<record model="ir.ui.view" id="vit_item_form">
+			<field name="name">vit_item_form</field>
+			<field name="model">vit.item</field>
+			<field name="type">form</field>
+			<field name="priority" eval="8"/>
+			<field name="arch" type="xml">
+				<form string="Items">
+					<sheet>
+						<group>
+							<field name="name"/>
+							<field name="total_bobot" invisible="1"/>
+						</group>
+						<notebook>
+							<page string="Components">
+								<field name="data_line_ids">
+									<tree string="Components" editable="bottom">
+										<field name="comp_id"/>
+										<field name="tanggal_start"/>
+										<field name="waktu_kerja"/>
+										<field name="bobot" placeholder="%"/>
+										<field name="tanggal_end"/>
+										<field name="tanggal_real"/>
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+	</data>
+</odoo>
